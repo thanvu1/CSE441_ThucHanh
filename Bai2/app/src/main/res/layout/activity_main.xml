@@ -4,17 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.lenovo.bai2_vongdoi.MainActivity">
+    tools:context="com.example.bai2.MainActivity">
 
     <TextView
-        android:text="Demo Cycle Life"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:textStyle="normal|bold"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
         android:gravity="center"
+        android:text="Demo Cycle Life"
         android:textColor="@android:color/holo_green_dark"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="normal|bold" />
 
     <Button
         android:text="Call Dialog"
