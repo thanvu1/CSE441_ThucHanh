@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="update ui bai4.1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,5 +63,10 @@
       <updated>1753144776931</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge branch 'main' of https://github.com/thanvu1/CSE441_ThucHanh&#10;&#10;# Conflicts:&#10;#&#9;Bai4/Bai4_1/.gitignore&#10;#&#9;Bai4/Bai4_1/.idea/.gitignore&#10;#&#9;Bai4/Bai4_1/app/.gitignore&#10;#&#9;Bai4/Bai4_1/app/build.gradle.kts&#10;#&#9;Bai4/Bai4_1/app/proguard-rules.pro&#10;#&#9;Bai4/Bai4_1/app/src/androidTest/java/com/example/bai41/ExampleInstrumentedTest.kt&#10;#&#9;Bai4/Bai4_1/app/src/main/AndroidManifest.xml&#10;#&#9;Bai4/Bai4_1/app/src/main/java/com/example/bai41/MainActivity.kt&#10;#&#9;Bai4/Bai4_1/app/src/main/res/drawable/ic_launcher_background.xml&#10;#&#9;Bai4/Bai4_1/app/src/main/res/drawable/ic_launcher_foreground.xml&#10;#&#9;Bai4/Bai4_1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml&#10;#&#9;Bai4/Bai4_1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml&#10;#&#9;Bai4/Bai4_1/app/src/main/res/mipmap-hdpi/ic_launcher.webp&#10;#&#9;Bai4/Bai4_1/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp&#10;#&#9;Bai4/Bai4_1/app/src/main/res/mipmap-mdpi/ic_launcher.webp&#10;#&#9;Bai4/Bai4_1/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp&#10;#&#9;Bai4/Bai4_1/app/src/main/res/mipmap-xhdpi/ic_launcher.webp&#10;#&#9;Bai4/Bai4_1/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp&#10;#&#9;Bai4/Bai4_1/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp&#10;#&#9;Bai4/Bai4_1/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp&#10;#&#9;Bai4/Bai4_1/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp&#10;#&#9;Bai4/Bai4_1/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp&#10;#&#9;Bai4/Bai4_1/app/src/main/res/values-night/themes.xml&#10;#&#9;Bai4/Bai4_1/app/src/main/res/values/colors.xml&#10;#&#9;Bai4/Bai4_1/app/src/main/res/values/strings.xml&#10;#&#9;Bai4/Bai4_1/app/src/main/res/values/themes.xml&#10;#&#9;Bai4/Bai4_1/app/src/main/res/xml/backup_rules.xml&#10;#&#9;Bai4/Bai4_1/app/src/main/res/xml/data_extraction_rules.xml&#10;#&#9;Bai4/Bai4_1/app/src/test/java/com/example/bai41/ExampleUnitTest.kt&#10;#&#9;Bai4/Bai4_1/build.gradle.kts&#10;#&#9;Bai4/Bai4_1/gradle.properties&#10;#&#9;Bai4/Bai4_1/gradle/libs.versions.toml&#10;#&#9;Bai4/Bai4_1/gradle/wrapper/gradle-wrapper.jar&#10;#&#9;Bai4/Bai4_1/gradle/wrapper/gradle-wrapper.properties&#10;#&#9;Bai4/Bai4_1/gradlew&#10;#&#9;Bai4/Bai4_1/gradlew.bat&#10;#&#9;Bai4/Bai4_1/settings.gradle.kts" />
+    <MESSAGE value="update ui bai4.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="update ui bai4.1" />
   </component>
 </project>
