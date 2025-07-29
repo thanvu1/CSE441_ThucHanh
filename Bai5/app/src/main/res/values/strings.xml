@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">bai5</string>
+    <string name="nhap_day_du_abc">Vui lòng nhập đủ a, b, c</string>
+    <string name="vo_so_nghiem">PT vô số nghiệm</string>
+    <string name="vo_nghiem">PT vô nghiệm</string>
+    <string name="mot_nghiem">PT có 1 nghiệm, x = %1$s</string>
+    <string name="nghiem_kep">PT có nghiệm kép x1 = x2 = %1$s</string>
+    <string name="hai_nghiem">PT có 2 nghiệm: x1 = %1$s; x2 = %2$s</string>
+    <string name="sai_dinh_dang">Sai định dạng dữ liệu!</string>
 </resources>

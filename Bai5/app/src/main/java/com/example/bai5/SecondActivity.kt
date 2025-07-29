@@ -1,6 +1,7 @@
 package com.example.bai5
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -32,12 +33,12 @@ class SecondActivity : Activity() {
         txtkq = findViewById(R.id.txtkq)
 
         btnGiai?.setOnClickListener {
-            val sa = edita?.text.toString().trim()
-            val sb = editb?.text.toString().trim()
-            val sc = editc?.text.toString().trim()
+            val sa = edita?.text?.toString()?.trim()
+            val sb = editb?.text?.toString()?.trim()
+            val sc = editc?.text?.toString()?.trim()
 
-            if (sa.isEmpty() || sb.isEmpty() || sc.isEmpty()) {
-                txtkq?.text = "Vui lòng nhập đủ a, b, c"
+            if (sa.isNullOrEmpty() || sb.isNullOrEmpty() || sc.isNullOrEmpty()) {
+                txtkq?.text = getString(R.string.nhap_day_du_abc)
                 return@setOnClickListener
             }
 
@@ -45,30 +46,29 @@ class SecondActivity : Activity() {
                 val a = sa.toDouble()
                 val b = sb.toDouble()
                 val c = sc.toDouble()
-                var kq = ""
                 val dcf = DecimalFormat("0.00")
 
-                if (a == 0.0) {
+                val kq = if (a == 0.0) {
                     if (b == 0.0) {
-                        kq = if (c == 0.0) "PT vô số nghiệm" else "PT vô nghiệm"
+                        if (c == 0.0) getString(R.string.vo_so_nghiem) else getString(R.string.vo_nghiem)
                     } else {
-                        kq = "PT có 1 nghiệm, x = ${dcf.format(-c / b)}"
+                        getString(R.string.mot_nghiem, dcf.format(-c / b))
                     }
                 } else {
                     val delta = b * b - 4 * a * c
-                    kq = when {
-                        delta < 0 -> "PT vô nghiệm"
-                        delta == 0.0 -> "PT có nghiệm kép x1 = x2 = ${dcf.format(-b / (2 * a))}"
+                    when {
+                        delta < 0 -> getString(R.string.vo_nghiem)
+                        delta == 0.0 -> getString(R.string.nghiem_kep, dcf.format(-b / (2 * a)))
                         else -> {
                             val x1 = (-b + sqrt(delta)) / (2 * a)
                             val x2 = (-b - sqrt(delta)) / (2 * a)
-                            "PT có 2 nghiệm: x1 = ${dcf.format(x1)}; x2 = ${dcf.format(x2)}"
+                            getString(R.string.hai_nghiem, dcf.format(x1), dcf.format(x2))
                         }
                     }
                 }
                 txtkq?.text = kq
-            } catch (ex: Exception) {
-                txtkq?.text = "Sai định dạng dữ liệu!"
+            } catch (_: Exception) {
+                txtkq?.text = getString(R.string.sai_dinh_dang)
             }
         }
 
@@ -85,6 +85,10 @@ class SecondActivity : Activity() {
         }
 
         btnVechinh?.setOnClickListener {
+            // Chuyển về MainActivity bằng Intent
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            startActivity(intent)
             finish()
         }
     }
