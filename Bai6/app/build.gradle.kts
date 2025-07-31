@@ -37,6 +37,7 @@ android {
 
 dependencies {
     implementation("com.squareup.picasso:picasso:2.8")
+    implementation("androidx.activity:activity:1.6.0-alpha05")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
