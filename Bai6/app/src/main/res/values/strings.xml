@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Bai6</string>
+    <string name="title_thongtincanhan">Thông tin cá nhân</string>
+    <string name="label_hoten">Họ tên:</string>
+    <string name="label_cmnd">CMND:</string>
+    <string name="label_bangcap">Bằng cấp</string>
+    <string name="label_sothich">Sở thích</string>
+    <string name="label_bosung">Thông tin bổ sung</string>
+    <string name="radio_trungcap">Trung cấp</string>
+    <string name="radio_caodang">Cao đẳng</string>
+    <string name="radio_daihoc">Đại học</string>
+    <string name="chk_docbao">Đọc báo</string>
+    <string name="chk_docsach">Đọc sách</string>
+    <string name="chk_doccode">Đọc coding</string>
+    <string name="btn_gui">Gửi thông tin</string>
+    <string name="dialog_dong">Đóng</string>
+    <string name="dialog_exit_title">Question</string>
+    <string name="dialog_exit_content">Are you sure you want to exit?</string>
+    <string name="dialog_exit_yes">YES</string>
+    <string name="dialog_exit_no">NO</string>
 </resources>

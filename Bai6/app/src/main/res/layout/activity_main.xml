@@ -1,19 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@android:color/white">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Header -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_thongtincanhan"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:background="@color/color_header"
+            android:padding="10dp"
+            android:textStyle="bold" />
+
+        <!-- Ảnh đại diện dùng Picasso -->
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_avatar"
+            android:scaleType="centerCrop"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Avatar"/>
+
+        <!-- Thông tin cá nhân -->
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/tableRow1">
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_hoten"
+                    android:textSize="16sp" />
+                <EditText
+                    android:id="@+id/edtten"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nhập họ tên"
+                    android:textSize="16sp"
+                    android:background="@android:color/white" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow2">
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_cmnd"
+                    android:textSize="16sp" />
+                <EditText
+                    android:id="@+id/edtcmnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nhập số CMND"
+                    android:textSize="16sp"
+                    android:background="@android:color/white"
+                    android:inputType="number"/>
+            </TableRow>
+        </TableLayout>
+
+        <!-- Bằng cấp -->
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_bangcap"
+            android:background="@color/color_section"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:padding="5dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/idgruop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <RadioButton
+                android:id="@+id/radtc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_trungcap"
+                android:textSize="15sp"/>
+            <RadioButton
+                android:id="@+id/radcd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_caodang"
+                android:textSize="15sp"/>
+            <RadioButton
+                android:id="@+id/raddh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_daihoc"
+                android:textSize="15sp"/>
+        </RadioGroup>
+
+        <!-- Sở thích -->
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_sothich"
+            android:background="@color/color_section"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:padding="5dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <CheckBox
+                android:id="@+id/chkdocbao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk_docbao"/>
+            <CheckBox
+                android:id="@+id/chkdocsach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk_docsach"/>
+            <CheckBox
+                android:id="@+id/chkcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk_doccode"/>
+        </LinearLayout>
+
+        <!-- Thông tin bổ sung -->
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_bosung"
+            android:background="@color/color_section"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:padding="5dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtbosung"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:hint="Ghi chú thêm"
+            android:gravity="top|start"
+            android:background="@android:color/white"
+            android:textSize="15sp"
+            android:inputType="textMultiLine"
+            android:padding="8dp"/>
+
+        <!-- Nút gửi thông tin -->
+        <Button
+            android:id="@+id/btnsend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_gui"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/color_header"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:layout_marginTop="14dp"/>
+    </LinearLayout>
+</ScrollView>

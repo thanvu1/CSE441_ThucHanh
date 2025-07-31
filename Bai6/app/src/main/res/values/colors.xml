@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="color_header">#1797C2</color>
+    <color name="color_section">#0099FF</color>
+    <string name="color_header">#1797C2</string>
+    <string name="color_bg">#F6F8FB</string>
+    <string name="color_section">#0099FF</string>
+    <string name="color_text_title">#FFFFFF</string>
+    <string name="color_line">#0288D1</string>
 </resources>
