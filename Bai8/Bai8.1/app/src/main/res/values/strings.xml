@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">bai8.1</string>
+    <string name="call_phone">Call Phone</string>
+    <string name="send_sms">Send SMS</string>
 </resources>
