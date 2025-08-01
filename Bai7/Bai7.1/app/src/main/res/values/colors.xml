@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="main_bg">#54D5C9</color>     <!-- Màu nền MainActivity -->
+    <color name="child_bg">#FFE733</color>    <!-- Màu nền ChildActivity -->
+    <color name="btn_bg">#CCCCCC</color>
+    <color name="text_main">#1A1A1A</color>
+    <color name="text_child">#00796B</color>
 </resources>
