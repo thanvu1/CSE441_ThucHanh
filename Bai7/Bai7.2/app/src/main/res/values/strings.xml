@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Bai7.2</string>
+    <string name="title_main">Giải phương trình bậc 1</string>
+    <string name="hint_a">Nhập a:</string>
+    <string name="hint_b">Nhập b:</string>
+    <string name="btn_kq">Kết quả</string>
+    <string name="title_kq">Kết quả giải phương trình bậc 1</string>
+    <string name="btn_back">Back</string>
 </resources>
