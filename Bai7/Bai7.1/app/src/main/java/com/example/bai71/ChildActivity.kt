@@ -8,15 +8,15 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
-class child_activity : AppCompatActivity() {
+class ChildActivity : AppCompatActivity() {
     protected override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.child_activity)
+        setContentView(R.layout.activity_child)
         val btn = findViewById(R.id.button1) as Button
         val txt1 = findViewById(R.id.textView1) as TextView?
         btn.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                val intent1: Intent = Intent(this@child_activity, MainActivity::class.java)
+                val intent1: Intent = Intent(this@ChildActivity, MainActivity::class.java)
                 startActivity(intent1)
             }
         })
