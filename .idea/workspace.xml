@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="update ui bai4.1" />
+    <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="update ui bai4.1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai7/Bai7.3/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai7/Bai7.3/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai7/Bai7.3/app/src/main/java/com/example/bai73/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Bai7/Bai7.3/app/src/main/java/com/example/bai73/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai7/Bai7.3/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai7/Bai7.3/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai7/Bai7.3/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai7/Bai7.3/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai7/Bai7.3/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai7/Bai7.3/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

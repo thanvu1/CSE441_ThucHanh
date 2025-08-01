@@ -11,102 +11,93 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/main_title"
-        android:textColor="@color/label_title"
+        android:text="@string/sub_title"
+        android:textColor="@color/label_teal"
         android:textStyle="bold"
         android:gravity="center"
         android:textSize="20sp"
         android:layout_marginBottom="18dp"
         android:layout_marginTop="6dp"/>
 
-    <!-- Nhập A -->
+    <!-- Nhận A -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginBottom="8dp">
         <TextView
-            android:id="@+id/labelA"
+            android:id="@+id/labelAA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_a"
-            android:textColor="@color/label_teal"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:layout_marginEnd="4dp"/>
-        <EditText
-            android:id="@+id/edtA"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="number"
-            android:textSize="16sp"
-            android:background="@android:color/transparent"/>
-    </LinearLayout>
-
-    <!-- Nhập B -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp">
-        <TextView
-            android:id="@+id/labelB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_b"
-            android:textColor="@color/label_teal"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:layout_marginEnd="4dp"/>
-        <EditText
-            android:id="@+id/edtB"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="number"
-            android:textSize="16sp"
-            android:background="@android:color/transparent"/>
-    </LinearLayout>
-
-    <!-- Kết quả -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
-        <TextView
-            android:id="@+id/labelKQ"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_kq"
+            android:text="@string/label_aa"
             android:textColor="@color/label_red"
             android:textStyle="bold"
             android:textSize="16sp"
             android:layout_marginEnd="4dp"/>
         <EditText
-            android:id="@+id/edtkq"
+            android:id="@+id/edtAA"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="none"
+            android:inputType="number"
             android:textSize="16sp"
-            android:background="@android:color/transparent"
-            android:focusable="false"
-            android:enabled="false"/>
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    <!-- Nhận B -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:id="@+id/labelBB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_bb"
+            android:textColor="@color/label_red"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginEnd="4dp"/>
+        <EditText
+            android:id="@+id/edtBB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"/>
     </LinearLayout>
 
     <!-- Nút -->
-    <Button
-        android:id="@+id/btnrequest"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_request"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:background="@color/button_purple"
-        android:layout_marginTop="24dp"
-        android:elevation="4dp"/>
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btnsendtong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_sum"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/button_purple"
+            android:layout_marginEnd="10dp"
+            android:elevation="4dp"/>
+        <Button
+            android:id="@+id/btnsendhieu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_sub"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/button_purple"
+            android:elevation="4dp"/>
+    </LinearLayout>
 </LinearLayout>
