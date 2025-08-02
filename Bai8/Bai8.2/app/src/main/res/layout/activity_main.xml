@@ -1,19 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="@color/capture_bg"
+    android:gravity="center_horizontal"
+    android:padding="0dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- App Bar/Toolbar (nếu có thể dùng trong Activity) -->
+    <!-- Nếu muốn dùng Toolbar thì dùng thêm androidx.appcompat.widget.Toolbar -->
+
+    <ImageView
+        android:id="@+id/myimg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/img_desc"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mygirl" /> <!-- Ảnh mặc định, có thể đổi bằng ảnh khác -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingTop="20dp"
+        android:paddingBottom="36dp"
+        android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/btncapture"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_capture_button"
+            android:contentDescription="@string/btn_capture"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:tint="@color/white"
+            android:src="@drawable/icon" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">bai8.2</string>
+    <string name="img_desc">Ảnh chụp</string>
+    <string name="btn_capture">Chụp ảnh</string>
 </resources>
