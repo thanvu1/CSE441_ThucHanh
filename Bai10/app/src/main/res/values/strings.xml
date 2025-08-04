@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">bai10</string>
+    <string name="sms_receiver">SMS Receiver</string>
+    <string name="hint_source">Số cần theo dõi</string>
+    <string name="hint_target">Số chuyển tiếp</string>
+    <string name="btn_toggle">Bật chuyển tiếp</string>
+    <string name="status_off">Chưa kích hoạt</string>
+    <string name="status_on">Đang chạy</string>
 </resources>
