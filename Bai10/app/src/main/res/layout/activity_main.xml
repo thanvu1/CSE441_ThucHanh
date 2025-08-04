@@ -1,19 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/white"
+    android:padding="24dp"
+    android:id="@+id/main">
 
+    <!-- Tiêu đề nổi bật -->
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="SMS Receiver"
+        android:textColor="#FF0000"
+        android:background="#24D7F7"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Nhập số điện thoại cần theo dõi -->
+    <EditText
+        android:id="@+id/edtSourceNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số cần theo dõi (vd: 0988123123)"
+        android:inputType="phone"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Nhập số điện thoại nhận chuyển tiếp -->
+    <EditText
+        android:id="@+id/edtTargetNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số chuyển tiếp (vd: 0988345678)"
+        android:inputType="phone"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Nút bật/tắt chức năng -->
+    <Button
+        android:id="@+id/btnToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bật chuyển tiếp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="24dp"
+        android:background="#24D7F7"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"/>
+
+    <!-- Trạng thái chức năng -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chưa kích hoạt"
+        android:textColor="#222"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"/>
+</LinearLayout>
