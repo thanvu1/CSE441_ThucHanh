@@ -1,20 +1,31 @@
 package com.example.bai11
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+
 
 class MainActivity : AppCompatActivity() {
+    var btnopen: Button? = null
+    var edtlink: EditText? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        edtlink = findViewById<EditText?>(R.id.edtlink)
+        btnopen = findViewById<Button?>(R.id.btnopen)
+        btnopen!!.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                // TODO Auto-generated method stub
+                val intent = Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("https://" + edtlink!!.getText().toString())
+                )
+                startActivity(intent)
+            }
+        })
     }
 }

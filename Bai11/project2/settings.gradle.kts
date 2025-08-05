@@ -19,7 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "bai11"
+rootProject.name = "project2"
 include(":app")
-include(":app")
- 
