@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Bai12/Bai12.2/.idea/appInsightsSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai12/Bai12.2/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai12/Bai12.2/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai12/Bai12.2/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai12/Bai12.2/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai12/Bai12.2/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai12/Bai12.2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai12/Bai12.2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai12/Bai12.2/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai12/Bai12.2/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai12/Bai12.2/app/src/main/java/com/example/note/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Bai12/Bai12.2/app/src/main/java/com/example/note/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai12/Bai12.2/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai12/Bai12.2/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

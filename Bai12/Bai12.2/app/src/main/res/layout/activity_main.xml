@@ -1,19 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#FFF"
+    android:id="@+id/main">
 
+    <!-- Title -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/textView1"
+        android:text="Calendar Notes"
+        android:gravity="center"
+        android:background="#ADFF2F"
+        android:textColor="#FF0000"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Date -->
+    <TextView
+        android:id="@+id/txtdate"
+        android:text="Hôm Nay: "
+        android:gravity="center"
+        android:background="#FFFF66"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- EditText for work -->
+    <EditText
+        android:id="@+id/edtwork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the work here..." />
+
+    <!-- Row: Hour, Minute, Button -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:text="Hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp" />
+
+        <EditText
+            android:id="@+id/edthour"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="2"
+            android:layout_marginRight="8dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:text="Minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp" />
+
+        <EditText
+            android:id="@+id/edtmi"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="2"
+            android:layout_marginRight="8dp" />
+
+        <Button
+            android:id="@+id/btnadd"
+            android:text="Add Work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFCCCC"
+            android:textColor="#C00"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- ListView -->
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#CCC"
+        android:dividerHeight="1dp"/>
+</LinearLayout>
