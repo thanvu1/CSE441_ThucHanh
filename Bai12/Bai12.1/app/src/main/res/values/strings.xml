@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PhoneList</string>
+    <string name="item_position">Vị trí %1$d : %2$s</string>
 </resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/phonelist/MainActivity.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/example/phonelist/MainActivity.kt" />
+              <option name="originalContent" value="package com.example.phonelist&#10;&#10;import android.app.Activity&#10;import android.os.Bundle&#10;import android.view.View&#10;import android.widget.AdapterView&#10;import android.widget.AdapterView.OnItemClickListener&#10;import android.widget.ArrayAdapter&#10;import android.widget.ListView&#10;import android.widget.TextView&#10;&#10;&#10;class MainActivity : Activity() {&#10;    var txt1: TextView? = null&#10;    override fun onCreate(savedInstanceState: Bundle?) {&#10;        super.onCreate(savedInstanceState)&#10;        setContentView(R.layout.activity_main)&#10;        txt1 = findViewById&lt;TextView?&gt;(R.id.selection)&#10;&#10;//1. Khởi tạo dữ liệu cho mảng arr (còn gọi là data source)&#10;        val arr1: Array&lt;String?&gt;? = arrayOf&lt;String?&gt;(&#10;            &quot;Iphone 7&quot;, &quot;SamSung Galaxy S7&quot;,&#10;            &quot;Nokia Lumia 730&quot;, &quot;Sony Xperia XZ&quot;, &quot;HTC One E9&quot;&#10;        )&#10;&#10;//2. Khai báo Adapter và gán Data source vào ArrayAdapter&#10;        val adapter1: ArrayAdapter&lt;String?&gt; =&#10;            ArrayAdapter&lt;String?&gt;(this, R.layout.simple_list_item, arr1)&#10;&#10;//3. Khai báo Listview và đưa Adapter  vào ListView&#10;        val lv1 = findViewById&lt;ListView?&gt;(R.id.lv1)&#10;        lv1.setAdapter(adapter1)&#10;&#10;//4. Viết sự kiện khi Click vào một dòng trên ListView&#10;        lv1.setOnItemClickListener(object : OnItemClickListener {&#10;            override fun onItemClick(&#10;                arg0: AdapterView&lt;*&gt;?, arg1: View?, i: Int,&#10;                arg3: Long&#10;            ) {&#10;// TODO Auto-generated method stub&#10;                txt1!!.setText(&quot;Vị trí &quot; + i + &quot; : &quot; + arr1!![i])&#10;            }&#10;        })&#10;    }&#10;}" />
+              <option name="updatedContent" value="package com.example.phonelist&#10;&#10;import android.app.Activity&#10;import android.os.Bundle&#10;import android.view.View&#10;import android.widget.AdapterView&#10;import android.widget.AdapterView.OnItemClickListener&#10;import android.widget.ArrayAdapter&#10;import android.widget.ListView&#10;import android.widget.TextView&#10;&#10;&#10;class MainActivity : Activity() {&#10;    var txt1: TextView? = null&#10;    override fun onCreate(savedInstanceState: Bundle?) {&#10;        super.onCreate(savedInstanceState)&#10;        setContentView(R.layout.activity_main)&#10;        txt1 = findViewById&lt;TextView?&gt;(R.id.selection)&#10;&#10;//1. Khởi tạo dữ liệu cho mảng arr (còn gọi là data source)&#10;        val arr1: Array&lt;String&gt; = arrayOf(&#10;            &quot;Iphone 7&quot;, &quot;SamSung Galaxy S7&quot;,&#10;            &quot;Nokia Lumia 730&quot;, &quot;Sony Xperia XZ&quot;, &quot;HTC One E9&quot;&#10;        )&#10;&#10;//2. Khai báo Adapter và gán Data source vào ArrayAdapter&#10;        val adapter1: ArrayAdapter&lt;String&gt; =&#10;            ArrayAdapter&lt;String&gt;(this, R.layout.simple_list_item, arr1)&#10;&#10;//3. Khai báo Listview và đưa Adapter  vào ListView&#10;        val lv1 = findViewById&lt;ListView?&gt;(R.id.lv1)&#10;        lv1?.setAdapter(adapter1)&#10;&#10;//4. Viết sự kiện khi Click vào một dòng trên ListView&#10;        lv1?.setOnItemClickListener(object : OnItemClickListener {&#10;            override fun onItemClick(&#10;                arg0: AdapterView&lt;*&gt;?, arg1: View?, i: Int,&#10;                arg3: Long&#10;            ) {&#10;                txt1?.setText(getString(R.string.item_position, i, arr1[i]))&#10;            }&#10;        })&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+              <option name="originalContent" value="&lt;resources&gt;&#10;    &lt;string name=&quot;app_name&quot;&gt;PhoneList&lt;/string&gt;&#10;&lt;/resources&gt;" />
+              <option name="updatedContent" value="&lt;resources&gt;&#10;    &lt;string name=&quot;app_name&quot;&gt;PhoneList&lt;/string&gt;&#10;    &lt;string name=&quot;item_position&quot;&gt;Vị trí %1$d : %2$s&lt;/string&gt;&#10;&lt;/resources&gt;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
