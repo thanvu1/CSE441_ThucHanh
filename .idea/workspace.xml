@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="chore: initialize bai13.1 AutocompleteTextView project">
-      <change afterPath="$PROJECT_DIR$/Bai13/Bai13.1/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai13/Bai13.1/.idea/AndroidProjectSystem.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai13/Bai13.1/.idea/appInsightsSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai13/Bai13.1/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai13/Bai13.1/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai13/Bai13.1/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai13/Bai13.1/.idea/migrations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai13/Bai13.1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai13/Bai13.1/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bai13/Bai13.1/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bai13/Bai13.1/app/src/main/java/com/example/autocompletetextview/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Bai13/Bai13.1/app/src/main/java/com/example/autocompletetextview/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bai13/Bai13.1/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai13/Bai13.1/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="chore: initialize bai13.2 gridview project setup" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754551247492</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="chore: initialize bai13.2 gridview project setup">
+      <option name="closed" value="true" />
+      <created>1754552113169</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1754552113169</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -127,6 +121,7 @@
     <MESSAGE value="Feat: Update note app (Bai12.2)&#10;&#10;- Add functionality for adding and deleting notes.&#10;- Implement data persistence using SharedPreferences.&#10;- Enhance UI and add input validation for time." />
     <MESSAGE value="feat: add spinner functionality to main activity and update layout" />
     <MESSAGE value="chore: initialize bai13.1 AutocompleteTextView project" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: initialize bai13.1 AutocompleteTextView project" />
+    <MESSAGE value="chore: initialize bai13.2 gridview project setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: initialize bai13.2 gridview project setup" />
   </component>
 </project>
