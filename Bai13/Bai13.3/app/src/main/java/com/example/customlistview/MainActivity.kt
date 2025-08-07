@@ -1,4 +1,4 @@
-git package com.example.customlistview
+package com.example.customlistview
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
