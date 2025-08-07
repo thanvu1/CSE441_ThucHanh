@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="Feat: Update note app (Bai12.2)&#10;&#10;- Add functionality for adding and deleting notes.&#10;- Implement data persistence using SharedPreferences.&#10;- Enhance UI and add input validation for time.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai12/Bai12.3/app/src/main/java/com/example/spinner/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Bai12/Bai12.3/app/src/main/java/com/example/spinner/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai12/Bai12.3/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai12/Bai12.3/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
