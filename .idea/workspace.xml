@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="chore: initialize bai13.2 gridview project setup" />
+    <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="chore: initialize bai13.2 gridview project setup">
+      <change afterPath="$PROJECT_DIR$/Bai13/btvn/.idea/appInsightsSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai13/btvn/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai13/btvn/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai13/btvn/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai13/btvn/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Bai13/btvn/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai13/btvn/app/src/main/java/com/example/imggridview/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Bai13/btvn/app/src/main/java/com/example/imggridview/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai13/btvn/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai13/btvn/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
