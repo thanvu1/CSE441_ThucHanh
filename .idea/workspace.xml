@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="feat: add image grid view and display selected image function">
+    <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="feat: initialize bai13.4 custom grid view project setup">
+      <change afterPath="$PROJECT_DIR$/Bai13/Bai13.4/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai13/Bai13.4/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Bai13/Bai13.4/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai13/Bai13.4/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai13/Bai13.4/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai13/Bai13.4/app/src/main/java/com/example/customgridview/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Bai13/Bai13.4/app/src/main/java/com/example/customgridview/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bai13/Bai13.4/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai13/Bai13.4/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754557553286</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: initialize bai13.4 custom grid view project setup">
+      <option name="closed" value="true" />
+      <created>1754620959892</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1754620959892</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -133,6 +146,7 @@
     <MESSAGE value="chore: initialize bai13.1 AutocompleteTextView project" />
     <MESSAGE value="chore: initialize bai13.2 gridview project setup" />
     <MESSAGE value="feat: add image grid view and display selected image function" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add image grid view and display selected image function" />
+    <MESSAGE value="feat: initialize bai13.4 custom grid view project setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: initialize bai13.4 custom grid view project setup" />
   </component>
 </project>
