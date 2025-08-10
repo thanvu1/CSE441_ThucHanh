@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="56dp"
-    android:orientation="horizontal"
-    android:gravity="center_vertical"
+    android:layout_width="match_parent" android:layout_height="56dp"
+    android:orientation="horizontal" android:gravity="center_vertical"
     android:paddingHorizontal="8dp">
 
     <TextView
@@ -26,11 +24,10 @@
         android:singleLine="true"
         android:ellipsize="end" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/btnlike"
         android:layout_width="36dp"
         android:layout_height="36dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/untitled"
-        android:src="@drawable/unlike" />
+        android:contentDescription="Like Button"
+        android:src="@mipmap/ic_launcher" />
 </LinearLayout>
