@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="feat: initialize project structure with Gradle setup and basic Android files">
+    <list default="true" id="8e5e1324-30f4-4902-bed0-049a5e2325a0" name="Changes" comment="feat: implement tab selector with addition functionality and project structure setup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bai14/Bai14.1/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Bai14/Bai14.1/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bai14/Bai14.1/app/src/main/java/com/example/tabselector/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Bai14/Bai14.1/app/src/main/java/com/example/tabselector/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bai14/Bai14.1/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Bai14/Bai14.1/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
