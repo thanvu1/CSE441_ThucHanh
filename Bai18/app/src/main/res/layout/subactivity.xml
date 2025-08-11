@@ -1,56 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="12dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TableRow><TextView
-        android:id="@+id/txtmaso"
-        android:text="#Mã số"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/></TableRow>
-
-    <TableRow>
-        <TextView android:text="Tên bài hát:" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:paddingEnd="8dp"/>
-        <TextView android:id="@+id/txtbaihat" android:textStyle="bold"
-            android:textColor="#2E7D32"
-            android:layout_width="0dp" android:layout_weight="1"
-            android:layout_height="wrap_content"/>
-    </TableRow>
-
-    <TableRow>
-        <TextView android:text="Lời bài hát:" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:paddingEnd="8dp"/>
-        <TextView android:id="@+id/txtloibaihat" android:layout_width="0dp"
-            android:layout_weight="1" android:layout_height="wrap_content"
-            android:maxLines="10"/>
-    </TableRow>
-
-    <TableRow>
-        <TextView android:text="Tác giả:" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:paddingEnd="8dp"/>
-        <TextView android:id="@+id/txttacgia" android:textColor="#1B5E20"
-            android:layout_width="0dp" android:layout_weight="1"
-            android:layout_height="wrap_content"/>
-    </TableRow>
-
-    <TableRow>
-        <TextView android:text="Yêu thích:" android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:paddingEnd="8dp"/>
-        <FrameLayout
-            android:layout_width="34dp" android:layout_height="34dp">
-            <ImageButton
-                android:id="@+id/btnthich"
-                android:background="@android:color/transparent"
-                android:src="@drawable/love" />
-            <ImageButton
-                android:id="@+id/btnkhongthich"
-                android:background="@android:color/transparent"
-                android:src="@drawable/favourite" />
-        </FrameLayout>
-    </TableRow>
-
-</TableLayout>
+<!-- app/src/main/res/layout/subactivity.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="16dp">
+        <TableRow>
+            <TextView android:text="#"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/txtmaso"
+                android:textStyle="bold" android:textSize="20sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:paddingStart="8dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="Tên bài hát:"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/txtbaihat"
+                android:textColor="#2E7D32" android:textStyle="bold"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:paddingStart="8dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="Lời bài hát:"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/txtloibaihat"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:paddingStart="8dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="Tác giả:"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/txttacgia"
+                android:textColor="#C62828"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:paddingStart="8dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="Yêu thích:"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <FrameLayout
+                android:layout_width="40dp" android:layout_height="40dp"
+                android:paddingStart="8dp">
+                <ImageButton
+                    android:id="@+id/btnthich"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"/>
+                <ImageButton
+                    android:id="@+id/btnkhongthich"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"/>
+            </FrameLayout>
+        </TableRow>
+    </TableLayout>
+</ScrollView>

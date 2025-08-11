@@ -4,178 +4,144 @@ import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.LayoutInflater
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import android.content.Intent
 import com.example.karaokevietnam.adpater.MyArrayAdapter
+import com.example.karaokevietnam.data.DbHelper
 import com.example.karaokevietnam.model.Item
-import java.io.File
-import java.io.FileOutputStream
-import java.io.InputStream
-import java.io.OutputStream
+import com.squareup.picasso.Picasso
 
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        private const val DB_PATH_SUFFIX = "/databases/"
-        const val DATABASE_NAME = "arirang.sqlite"
         lateinit var database: SQLiteDatabase
-
-        fun openDetail(ctx: android.app.Activity, maso: String) {
-            val i = Intent(ctx, SubActivity::class.java)
-            i.putExtra("maso", maso)
-            ctx.startActivity(i)
-        }
     }
 
+    private lateinit var tab: TabHost
     private lateinit var edttim: EditText
-    private lateinit var btnxoa: ImageButton
     private lateinit var lv1: ListView
     private lateinit var lv2: ListView
     private lateinit var lv3: ListView
+    private lateinit var btnxoa: ImageButton
 
-    private val list1 = arrayListOf<Item>()
-    private val list2 = arrayListOf<Item>()
-    private val list3 = arrayListOf<Item>()
+    private val list1 = mutableListOf<Item>()
+    private val list2 = mutableListOf<Item>()
+    private val list3 = mutableListOf<Item>()
 
-    private lateinit var adp1: MyArrayAdapter
-    private lateinit var adp2: MyArrayAdapter
-    private lateinit var adp3: MyArrayAdapter
+    private lateinit var ad1: MyArrayAdapter
+    private lateinit var ad2: MyArrayAdapter
+    private lateinit var ad3: MyArrayAdapter
+
+    // icon online cho tab
+    private val URL_SEARCH = "https://cdn-icons-png.flaticon.com/512/622/622669.png"
+    private val URL_LIST   = "https://cdn-icons-png.flaticon.com/512/1828/1828765.png"
+    private val URL_FAV    = "https://cdn-icons-png.flaticon.com/512/833/833472.png"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // 1) Copy DB từ assets nếu chưa có
-        processCopy()
+        // mở DB (tạo + seed nếu lần đầu)
+        database = DbHelper(this).writableDatabase
 
-        // 2) Mở DB
-        database = openOrCreateDatabase(DATABASE_NAME, MODE_PRIVATE, null)
-
-        // 3) Gán view + tabs
-        addControl()
-
-        // 4) Tìm kiếm live theo tên/mã
-        addSearch()
-
-        // 5) Sự kiện tab và nút xóa
-        addEvents()
+        bindViews()
+        setupTabs()
+        setupAdapters()
+        setupEvents()
     }
 
-    private fun addControl() {
-        val tab = findViewById<TabHost>(R.id.tabhost).apply { setup() }
-
-        val tab1 = tab.newTabSpec("t1").apply {
-            setContent(R.id.tab1)
-            setIndicator("", ContextCompat.getDrawable(this@MainActivity, R.drawable.search))
-        }
-        val tab2 = tab.newTabSpec("t2").apply {
-            setContent(R.id.tab2)
-            setIndicator("", ContextCompat.getDrawable(this@MainActivity, R.drawable.list))
-        }
-        val tab3 = tab.newTabSpec("t3").apply {
-            setContent(R.id.tab3)
-            setIndicator("", ContextCompat.getDrawable(this@MainActivity, R.drawable.favourite))
-        }
-        tab.addTab(tab1); tab.addTab(tab2); tab.addTab(tab3)
-
+    private fun bindViews() {
+        tab = findViewById(R.id.tabhost)
+        tab.setup()
         edttim = findViewById(R.id.edttim)
         btnxoa = findViewById(R.id.btnxoa)
         lv1 = findViewById(R.id.lv1)
         lv2 = findViewById(R.id.lv2)
         lv3 = findViewById(R.id.lv3)
-
-        adp1 = MyArrayAdapter(this, R.layout.listitem, list1)
-        adp2 = MyArrayAdapter(this, R.layout.listitem, list2)
-        adp3 = MyArrayAdapter(this, R.layout.listitem, list3)
-        lv1.adapter = adp1; lv2.adapter = adp2; lv3.adapter = adp3
     }
 
-    private fun addEvents() {
-        val tab = findViewById<TabHost>(R.id.tabhost)
-        tab.setOnTabChangedListener { id ->
-            when (id) {
-                "t2" -> loadAll()
-                "t3" -> loadFavorite()
+    private fun setupTabs() {
+        fun makeTab(tag: String, contentId: Int, url: String): TabHost.TabSpec {
+            val v = LayoutInflater.from(this).inflate(R.layout.tab_icon, null)
+            val img = v.findViewById<ImageView>(R.id.img)
+            Picasso.get().load(url).into(img)
+            return tab.newTabSpec(tag).apply {
+                setContent(contentId)
+                setIndicator(v)
             }
         }
-        btnxoa.setOnClickListener { edttim.setText("") }
+
+        tab.addTab(makeTab("t1", R.id.tab1, URL_SEARCH))
+        tab.addTab(makeTab("t2", R.id.tab2, URL_LIST))
+        tab.addTab(makeTab("t3", R.id.tab3, URL_FAV))
     }
 
-    private fun addSearch() {
+    private fun setupAdapters() {
+        ad1 = MyArrayAdapter(this, R.layout.listitem, list1)
+        ad2 = MyArrayAdapter(this, R.layout.listitem, list2)
+        ad3 = MyArrayAdapter(this, R.layout.listitem, list3)
+        lv1.adapter = ad1
+        lv2.adapter = ad2
+        lv3.adapter = ad3
+    }
+
+    private fun setupEvents() {
+        // tìm kiếm live
         edttim.addTextChangedListener(object : TextWatcher {
-            override fun onTextChanged(s: CharSequence?, st: Int, b: Int, c: Int) = loadSearch()
-            override fun beforeTextChanged(s: CharSequence?, st: Int, c: Int, a: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) = getSearch()
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun afterTextChanged(s: Editable?) {}
         })
-        loadSearch()
+        btnxoa.setOnClickListener { edttim.setText("") }
+
+        tab.setOnTabChangedListener {
+            when (it) {
+                "t2" -> loadDanhSach()
+                "t3" -> loadYeuThich()
+            }
+        }
+
+        // load mặc định
+        loadDanhSach()
     }
 
-    private fun loadSearch() {
-        val key = edttim.text.toString()
+    private fun getSearch() {
+        val q = edttim.text.toString().trim()
         list1.clear()
-        if (key.isNotEmpty()) {
+        if (q.isNotEmpty()) {
             val c = database.rawQuery(
-                "SELECT * FROM ArirangSongList WHERE TENBH1 LIKE ? OR MABH LIKE ?",
-                arrayOf("%$key%", "%$key%")
+                "SELECT MABH, TENBH1, YEUTHICH FROM ArirangSongList WHERE TENBH1 LIKE ? OR MABH LIKE ?",
+                arrayOf("%$q%", "%$q%")
             )
-            if (c.moveToFirst()) {
-                do {
-                    list1.add(Item(c.getString(1), c.getString(2), c.getInt(6)))
-                } while (c.moveToNext())
+            c.use {
+                while (it.moveToNext()) {
+                    list1.add(Item(it.getString(0), it.getString(1), it.getInt(2)))
+                }
             }
-            c.close()
         }
-        adp1.notifyDataSetChanged()
+        ad1.notifyDataSetChanged()
     }
 
-    private fun loadAll() {
+    private fun loadDanhSach() {
         list2.clear()
-        val c = database.rawQuery("SELECT * FROM ArirangSongList", null)
-        if (c.moveToFirst()) {
-            do list2.add(Item(c.getString(1), c.getString(2), c.getInt(6)))
-            while (c.moveToNext())
-        }
-        c.close()
-        adp2.notifyDataSetChanged()
-    }
-
-    private fun loadFavorite() {
-        list3.clear()
-        val c = database.rawQuery("SELECT * FROM ArirangSongList WHERE YEUTHICH=1", null)
-        if (c.moveToFirst()) {
-            do list3.add(Item(c.getString(1), c.getString(2), c.getInt(6)))
-            while (c.moveToNext())
-        }
-        c.close()
-        adp3.notifyDataSetChanged()
-    }
-
-    /* ---------- copy DB từ assets ---------- */
-    private fun appDbPath(): String = applicationInfo.dataDir + DB_PATH_SUFFIX + DATABASE_NAME
-
-    private fun processCopy() {
-        val dbFile = getDatabasePath(DATABASE_NAME)
-        if (!dbFile.exists()) {
-            try {
-                copyDbFromAssets()
-                Toast.makeText(this, "Đã copy CSDL từ assets", Toast.LENGTH_SHORT).show()
-            } catch (e: Exception) {
-                Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
+        val c = database.rawQuery("SELECT MABH, TENBH1, YEUTHICH FROM ArirangSongList", null)
+        c.use {
+            while (it.moveToNext()) {
+                list2.add(Item(it.getString(0), it.getString(1), it.getInt(2)))
             }
         }
+        ad2.notifyDataSetChanged()
     }
 
-    private fun copyDbFromAssets() {
-        val input: InputStream = assets.open(DATABASE_NAME)
-        val dir = File(applicationInfo.dataDir + DB_PATH_SUFFIX)
-        if (!dir.exists()) dir.mkdir()
-        val outFile = File(appDbPath())
-        val output: OutputStream = FileOutputStream(outFile)
-        val buffer = ByteArray(1024)
-        var len: Int
-        while (input.read(buffer).also { len = it } > 0) output.write(buffer, 0, len)
-        output.flush(); output.close(); input.close()
+    private fun loadYeuThich() {
+        list3.clear()
+        val c = database.rawQuery("SELECT MABH, TENBH1, YEUTHICH FROM ArirangSongList WHERE YEUTHICH=1", null)
+        c.use {
+            while (it.moveToNext()) {
+                list3.add(Item(it.getString(0), it.getString(1), it.getInt(2)))
+            }
+        }
+        ad3.notifyDataSetChanged()
     }
 }

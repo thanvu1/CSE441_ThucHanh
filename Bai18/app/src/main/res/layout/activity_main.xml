@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- app/src/main/res/layout/activity_main.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -15,50 +15,45 @@
 
             <TabWidget
                 android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_width="422dp"
+                android:layout_height="98dp" />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <!-- Tab 1: Tìm kiếm -->
+                <!-- Tab 1: tìm kiếm -->
                 <LinearLayout
                     android:id="@+id/tab1"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="8dp">
-
+                    android:padding="12dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical">
-
+                        android:orientation="horizontal">
                         <EditText
                             android:id="@+id/edttim"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:layout_height="wrap_content"
                             android:hint="Nhập Tên hoặc Mã bài hát"/>
-
                         <ImageButton
                             android:id="@+id/btnxoa"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:background="@android:color/transparent"
-                            android:contentDescription="@string/app_name"
-                            android:src="@drawable/xoa"/>
+                            android:background="@android:color/transparent"/>
                     </LinearLayout>
-
                     <ListView
                         android:id="@+id/lv1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
                 </LinearLayout>
 
-                <!-- Tab 2: Danh sách -->
+                <!-- Tab 2: danh sách -->
                 <LinearLayout
                     android:id="@+id/tab2"
                     android:orientation="vertical"
@@ -70,7 +65,7 @@
                         android:layout_height="match_parent"/>
                 </LinearLayout>
 
-                <!-- Tab 3: Yêu thích -->
+                <!-- Tab 3: yêu thích -->
                 <LinearLayout
                     android:id="@+id/tab3"
                     android:orientation="vertical"

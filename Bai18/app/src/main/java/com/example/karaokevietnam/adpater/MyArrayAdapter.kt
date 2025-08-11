@@ -1,7 +1,7 @@
 package com.example.karaokevietnam.adpater
 
-import android.app.Activity
 import android.content.ContentValues
+import android.content.Context
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -10,54 +10,56 @@ import android.widget.*
 import com.example.karaokevietnam.MainActivity
 import com.example.karaokevietnam.R
 import com.example.karaokevietnam.model.Item
+import com.example.karaokevietnam.SubActivity
+import com.squareup.picasso.Picasso
 
 class MyArrayAdapter(
-    private val ctx: Activity,
+    private val ctx: Context,
     private val layoutId: Int,
     private val items: MutableList<Item>
 ) : ArrayAdapter<Item>(ctx, layoutId, items) {
 
-    private class VH(v: View) {
-        val maso: TextView = v.findViewById(R.id.txtmaso)
-        val tieude: TextView = v.findViewById(R.id.txttieude)
-        val like: ImageView = v.findViewById(R.id.btnlike)
-        val unlike: ImageView = v.findViewById(R.id.btnunlike)
-    }
+    private val URL_LIKE   = "https://cdn-icons-png.flaticon.com/512/833/833472.png"
+    private val URL_UNLIKE = "https://cdn-icons-png.flaticon.com/512/1077/1077035.png"
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val row = convertView ?: LayoutInflater.from(ctx).inflate(layoutId, parent, false)
-        val h = (row.tag as? VH) ?: VH(row).also { row.tag = it }
+        val maso = row.findViewById<TextView>(R.id.txtmaso)
+        val tieude = row.findViewById<TextView>(R.id.txttieude)
+        val like = row.findViewById<ImageButton>(R.id.btnlike)
+        val unlike = row.findViewById<ImageButton>(R.id.btnunlike)
+
         val it = items[position]
+        maso.text = it.maso
+        tieude.text = it.tieude
 
-        h.maso.text = it.maso
-        h.tieude.text = it.tieude
+        // load icon bằng Picasso
+        Picasso.get().load(URL_LIKE).into(like)
+        Picasso.get().load(URL_UNLIKE).into(unlike)
 
-        // hiển thị nút tim
-        if (it.thich == 1) {
-            h.like.visibility = View.VISIBLE
-            h.unlike.visibility = View.INVISIBLE
-        } else {
-            h.like.visibility = View.INVISIBLE
-            h.unlike.visibility = View.VISIBLE
+        fun renderState(thich: Int) {
+            if (thich == 1) { like.visibility = View.VISIBLE; unlike.visibility = View.INVISIBLE }
+            else { like.visibility = View.INVISIBLE; unlike.visibility = View.VISIBLE }
         }
+        renderState(it.thich)
 
-        // toggle yêu thích
-        h.like.setOnClickListener {
-            updateLike(h.maso.text.toString(), 0)
+        like.setOnClickListener {
+            updateLike(maso.text.toString(), 0)
+            it.visibility = View.INVISIBLE
+            unlike.visibility = View.VISIBLE
             items[position].thich = 0
-            notifyDataSetChanged()
         }
-        h.unlike.setOnClickListener {
-            updateLike(h.maso.text.toString(), 1)
+        unlike.setOnClickListener {
+            updateLike(maso.text.toString(), 1)
+            it.visibility = View.INVISIBLE
+            like.visibility = View.VISIBLE
             items[position].thich = 1
-            notifyDataSetChanged()
         }
 
-        // mở chi tiết
-        h.tieude.setOnClickListener {
-            h.tieude.setTextColor(Color.RED)
-            h.maso.setTextColor(Color.RED)
-            MainActivity.openDetail(ctx, h.maso.text.toString())
+        tieude.setOnClickListener {
+            tieude.setTextColor(Color.RED)
+            maso.setTextColor(Color.RED)
+            SubActivity.start(ctx, maso.text.toString())
         }
 
         return row

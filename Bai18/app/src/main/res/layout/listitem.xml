@@ -1,43 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- app/src/main/res/layout/listitem.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:padding="8dp"
-    android:gravity="center_vertical"
-    android:layout_width="match_parent"
-    android:layout_height="64dp">
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="12dp" android:orientation="horizontal">
 
     <TextView
         android:id="@+id/txtmaso"
         android:textStyle="bold"
-        android:textColor="#1565C0"
+        android:textColor="#1E88E5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="52300"
-        android:layout_width="64dp"
-        android:layout_height="wrap_content"/>
+        android:paddingEnd="12dp"/>
 
     <TextView
         android:id="@+id/txttieude"
-        android:text="Em là ai Tôi là ai"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:paddingEnd="8dp"/>
+        android:layout_height="wrap_content"
+        android:text="Em là ai Tôi là ai"/>
 
     <FrameLayout
-        android:layout_width="34dp"
-        android:layout_height="34dp">
-
-        <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+        <ImageButton
             android:id="@+id/btnlike"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/love"
-            android:contentDescription="@string/app_name"/>
-
-        <ImageView
+            android:background="@android:color/transparent"/>
+        <ImageButton
             android:id="@+id/btnunlike"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/favourite"
-            android:contentDescription="@string/app_name"/>
+            android:background="@android:color/transparent"/>
     </FrameLayout>
 </LinearLayout>
